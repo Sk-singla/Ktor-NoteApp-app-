@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/allNotesFragment">
+
+    <fragment
+        android:id="@+id/allNotesFragment"
+        android:name="com.example.mynotes.ui.AllNotesFragment"
+        android:label="AllNotesFragment" >
+        <action
+            android:id="@+id/action_allNotesFragment_to_newNoteFragment"
+            app:destination="@id/newNoteFragment" />
+        <action
+            android:id="@+id/action_allNotesFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newNoteFragment"
+        android:name="com.example.mynotes.ui.NewNoteFragment"
+        android:label="NewNoteFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.example.mynotes.data.local.model.NoteLocal"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.mynotes.ui.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.mynotes.ui.CreateAccountFragment"
+        android:label="CreateAccountFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mynotes.ui.LoginFragment"
+        android:label="LoginFragment" />
+</navigation>

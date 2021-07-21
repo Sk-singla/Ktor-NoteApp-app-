@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyNotes</string>
+    <string name="transition_title">title</string>
+    <string name="transition_description">description</string>
+</resources>
